@@ -1,0 +1,59 @@
+package controller;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import com.google.gson.Gson;
+
+import dto.AndImgDTO;
+
+
+@WebServlet("*.amg")
+public class AndImgController extends HttpServlet {
+	String resource = "mybatis/config.xml"; //悼利何盒
+	InputStream inputStream;
+	SqlSessionFactory sqlSessionFactory;
+	SqlSession session;
+  @Override
+protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setCharacterEncoding("UTF-8");
+		resp.setContentType("text/html");
+		req.setCharacterEncoding("UTF-8");
+		initMybatis();
+		Gson gson = new Gson();
+		
+		
+}
+  
+	public List<AndImgDTO> initMybatis() {
+		try {
+			inputStream = Resources.getResourceAsStream(resource);
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+			session = sqlSessionFactory.openSession();
+			//孽府 角青何
+			List<AndImgDTO> list = session.selectList("and.mapper.select");
+			for (AndImgDTO andImgDTO : list) {
+				System.out.println(andImgDTO.getImg_url());
+				System.out.println(andImgDTO.getImg_id());
+			}
+			session.close();
+			return list;
+		}catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+}
