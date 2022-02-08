@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment1"
+    android:background="#abcdef"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/frag1_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Kazuha Slash"
+        android:textSize="32dp"
+        android:textColor="#222222"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/frag1_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:text="야옹"
+        />
+
+</LinearLayout>

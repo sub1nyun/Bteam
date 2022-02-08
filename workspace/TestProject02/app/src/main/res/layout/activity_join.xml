@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinActivity"
+    android:orientation="vertical">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="회원가입"
+      android:textSize="50dp"
+      android:gravity="center"
+      android:padding="50dp"
+      android:textColor="#000"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+    <LinearLayout
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="ID:"
+          android:layout_weight="3"
+          android:textSize="20dp"
+          android:gravity="center"/>
+      <EditText
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="ID를 입력하세요"
+          android:layout_weight="7"
+          android:id="@+id/join_Id"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="PW:"
+          android:layout_weight="3"
+          android:textSize="20dp"
+          android:gravity="center"/>
+      <EditText
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="PW를 입력하세요"
+          android:layout_weight="7"
+          android:id="@+id/join_Pw"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="NAME:"
+          android:layout_weight="3"
+          android:textSize="20dp"
+          android:gravity="center"/>
+      <EditText
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="성함을 입력하세요"
+          android:layout_weight="7"
+          android:id="@+id/join_Name"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="Birth:"
+          android:layout_weight="3"
+          android:textSize="20dp"
+          android:gravity="center"/>
+      <EditText
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="생년월일 입력하세요"
+          android:layout_weight="7"
+          android:id="@+id/join_Birth"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center">
+      <Button
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:text="회원가입하기"
+          android:id="@+id/Join_btn2"
+          android:backgroundTint="#F35B2B"
+          android:textColor="#000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center">
+      <Button
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:text="취소하기"
+          android:id="@+id/cancel_btn"
+          android:backgroundTint="#F4980F"
+          android:textColor="#000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+  </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+

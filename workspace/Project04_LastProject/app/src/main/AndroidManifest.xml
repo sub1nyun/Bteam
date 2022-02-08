@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.project04_lastproject">
+    package="com.example.project04_lastproject" >
     <!-- 이부분 놓침 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,14 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project04_LastProject"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".member.JoinActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <!-- 이부분 놓침 -->
+            android:exported="false" /> <!-- 이부분 놓침 -->
         <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+            android:name=".member.LoginActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

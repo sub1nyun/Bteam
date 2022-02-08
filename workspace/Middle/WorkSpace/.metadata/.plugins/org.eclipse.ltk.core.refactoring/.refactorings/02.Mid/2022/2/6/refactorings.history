@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;03.And_Img/src/main/java/mybatis&apos;&#x0D;&#x0A;- Original project: &apos;02.Mid&apos;&#x0D;&#x0A;- Destination element: &apos;03.And_Img/src/main/java/mybatis&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     config.xml&#x0D;&#x0A;     test-mapper.xml" description="Copy files" destination="=03.And_Img/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;mybatis" element1="src/main/java/mybatis/config.xml" element2="src/main/java/mybatis/test-mapper.xml" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1643855722343" units="0" version="1.0"/>
+</session>

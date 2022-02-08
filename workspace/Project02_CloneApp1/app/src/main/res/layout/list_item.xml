@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <!-- 높이는 wrap~으로(내부 위젯 크기만큼) -->
+
+   <ImageView
+       android:id="@+id/list_imgv"
+       android:layout_weight="2"
+       android:layout_width="0dp"
+       android:layout_height="100dp"
+       android:src="@drawable/ic_launcher_foreground"
+       android:background="#38489E"
+       android:layout_margin="10dp"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/list_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="윤수빈"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/list_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="안드로이드"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

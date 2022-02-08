@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/container">
+
+    <ImageView
+        android:id="@+id/grid_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/music"/>
+    <TextView
+        android:id="@+id/grid_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="톡딜"
+       android:background="#3C76B1"
+        android:textSize="50dp"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="소시지볼/치즈볼/커스타드볼"
+        android:textSize="15dp"
+        android:id="@+id/grid_tv2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="톡딜가 9,900원"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:id="@+id/grid_tv3"/>
+
+</LinearLayout>

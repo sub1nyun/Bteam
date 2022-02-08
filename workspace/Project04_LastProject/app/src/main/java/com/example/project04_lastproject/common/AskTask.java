@@ -19,7 +19,7 @@ public class AskTask extends AsyncTask<String , String , InputStream> {
     HttpPost httpPost;
     MultipartEntityBuilder builder;
     final String HTTPIP = "http://192.168.0.122";
-    final String SVRPATH = "/03.Last/";
+    final String SVRPATH = "/middle/";
     String mapping;
     private String postUrl ;
     ArrayList<ParamDTO> params = new ArrayList<>();

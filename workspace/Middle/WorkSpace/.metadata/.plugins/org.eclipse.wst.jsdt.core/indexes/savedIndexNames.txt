@@ -1,0 +1,4 @@
+INDEX VERSION 1.4+D:\Study_Android\WorkSpace\Middle\WorkSpace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+672594764.index
+1624048583.index
+4168786262.index
