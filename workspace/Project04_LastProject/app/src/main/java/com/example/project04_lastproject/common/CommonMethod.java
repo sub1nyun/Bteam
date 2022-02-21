@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutionException;
 public class CommonMethod {
     static InputStream in = null; //static method
 
-    public static InputStream exuteGet(AsyncTask<String , String , InputStream> task){
+    public static InputStream executeGet(AsyncTask<String , String , InputStream> task){
         try{
             in = task.execute().get();
             return in;

@@ -126,7 +126,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
                         Toast.makeText(context, "삭제 처리 진행", Toast.LENGTH_SHORT).show();
                         AskTask task = new AskTask("delete.cu");
                        task.addParam("id", list.get(i).getId()+"");
-                        CommonMethod.exuteGet(task);
+                        CommonMethod.executeGet(task);
                         customerMainFragment.refresh(inflater);
 
                     }

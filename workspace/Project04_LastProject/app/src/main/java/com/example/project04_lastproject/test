@@ -1,0 +1,9 @@
+INTENT -> 액티비티간의 이동
+
+4가지 컴포넌트들의 model
+FileProvider <-
+URL
+
+manifest에 등록이 되어야만 인식을한다.
+
+프로바이더는 구현만함

@@ -19,7 +19,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 
 public class CustomerMainFragment extends Fragment {
@@ -40,7 +39,7 @@ public class CustomerMainFragment extends Fragment {
     public void refresh(LayoutInflater inflater) {
         AskTask task = new AskTask("list.cu");
 
-        InputStream in = CommonMethod.exuteGet(task);
+        InputStream in = CommonMethod.executeGet(task);
         Gson gson = new Gson();
         List<CustomerVO> list = gson.fromJson(new InputStreamReader(in), new TypeToken<List<CustomerVO>>() {
         }.getType());

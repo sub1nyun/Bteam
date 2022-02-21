@@ -17,9 +17,6 @@ import com.example.project04_lastproject.common.AskTask;
 import com.example.project04_lastproject.common.CommonMethod;
 import com.google.gson.Gson;
 
-import java.io.InputStreamReader;
-import java.util.concurrent.ExecutionException;
-
 public class CustomerActivity extends AppCompatActivity {
 
     TextView tv_info;
@@ -92,7 +89,7 @@ public class CustomerActivity extends AppCompatActivity {
                 //String data = gson.toJson(vo);
                 AskTask task = new AskTask("update.cu");
                 task.addParam("vo", gson.toJson(vo)); //Spring에 갈때 파라메터를 추가해서 가기
-                CommonMethod.exuteGet(task);
+                CommonMethod.executeGet(task);
 
             }
         });
@@ -105,6 +102,6 @@ public class CustomerActivity extends AppCompatActivity {
     public void delete(String id) {
         AskTask task = new AskTask("delete.cu");
         task.addParam("id", id);
-        CommonMethod.exuteGet(task);
+        CommonMethod.executeGet(task);
     }
 }

@@ -7,12 +7,80 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <FrameLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/container"/>
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        android:id="@+id/drawer_layout">
+        <!-- 화면 크기만큼 늘리것인가 ▲ -->
+        <!-- 드로우가 열릴때 어디서 시작할지 -->
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!-- 앱바 레이아웃 사용을 위해서 넣음 -->
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat">
+                <!-- 테마에서 색 변경 (입력된 색을 먼저 찾음) -->
+
+                <!-- 실제 아이템이 되는것은 툴바 -->
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#FFFFFF"
+                    app:titleTextColor="@color/black"
+                    app:popupTheme="@style/Widget.AppCompat.Toolbar"
+                    android:id="@+id/toolbar"/>
+                    <!-- 기존 액션바 사이즈 -->
+            </com.google.android.material.appbar.AppBarLayout>
 
 
+
+
+        <!-- 액션바 사이즈만큼 떨어뜨려서 시작 -->
+        <LinearLayout
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:id="@+id/container"
+        android:background="#FFFFFF"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/btm_nav"
+        app:menu="@menu/btm_item"
+        app:itemIconTint="@drawable/btm_nav_color"
+        app:itemTextColor="@drawable/btm_nav_color"/>
+
+        </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <!-- 네비게이션 드로우 드로우 위젯 안에만 만들면 됨 -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/nav_menu"
+            app:headerLayout="@layout/nav_header"/>
+
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 
 </LinearLayout>

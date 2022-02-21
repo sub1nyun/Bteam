@@ -5,6 +5,43 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 외부저장소 -->
+    <!-- 카메라와 저장소들을 사용할 수 있게 하는 권한 부여 요청 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 카메라, 전면 ▼ 카메라의 기능 ▲ -->
+    <uses-feature android:name="android.hardware.camera2"
+                     android:required="true"/>
+    <!-- queries 추가 부분 -->
+
+    <queries>
+        <!-- WebView -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+        <!-- Youtube -->
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService" />
+        </intent>
+    </queries>
+
 
     <application
         android:allowBackup="true"
@@ -14,6 +51,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project04_LastProject"
         android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+                <data android:host="oauth"
+                    android:scheme="kakaoc1bdc0068a9d840e4ad3de07a83bf4da" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
         <activity
             android:name=".customer.CustomerActivity"
             android:exported="false" />
@@ -35,6 +91,28 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
+        <!-- 어플리 케이션 안쪽이면 됨  파일 처리를 위한 파일프로바이더 -->
+        <!-- provider authorities:도메인,
+        exported -> public이냐 아니냐,
+         grantUriPermissions 템프저장 uri가 나옴 uri에 (임시 파일) 접근 권한 -->
+        <provider
+            android:authorities="${applicationId}.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!-- 경로 추가  resource 만든 xml 넣음-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepath"/>
+
+
+
+        </provider>
+
+
+
+
     </application>
 
 </manifest>
